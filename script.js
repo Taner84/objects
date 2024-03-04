@@ -1,39 +1,44 @@
-const person = {
-  name: 'Leonardo',
-  shirt: 'white'
-}
+// const person = {
+//   name: 'Leonardo',
+//   shirt: 'white'
+// }
 
-//dot notation
-console.log(person.name)
+// //dot notation
+// console.log(person.name)
 
-//bracket notation
-console.log(person['shirt'])
+// //bracket notation
+// console.log(person['shirt'])
 
-//assign object
-person.phone = '1-222-222-2222'
-console.log(person.phone)
+// //assign object
+// person.phone = '1-222-222-2222'
+// console.log(person.phone)
 
-console.log(person)
+// console.log(person)
 
 //object person 2
 
-const person2 = {
-  name: 'Qazi',
-  shirt: 'black'
-}
+// const person2 = {
+//   name: 'Qazi',
+//   shirt: 'black'
+// }
 
-console.log(person2)
-console.log(person2.name)
+// console.log(person2)
+// console.log(person2.name)
 
 //function
 const introducer = (name, shirt) => {
   const person = {
     name: name,
-    shirt: shirt
+    shirt: shirt,
+    assets: 100000,
+    debt: 50000,
+    netWorth: function() {
+      return this.assets - this.debt
+    }
   }
-  const intro = `Hello my name is ${person.name}, the color of my shirt is ${person.shirt}`
+  const intro = `Hello my name is ${person.name}, the color of my shirt is $${person.shirt} and my networth is ${person.netWorth()} USD.`
 
   return intro
 }
 
-console.log(introducer('Qazi', 'black'))
+console.log(introducer('Leonardo', 'white'))
